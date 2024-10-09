@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-RUN git clone https://github.com/anitha233/nopCommerce.git
-RUN cd nopCommerce && mkdir published
-RUN dotnet publish -c Release -o published/ nopCommerce/src/Presentation/Nop.Web/Nop.Web.csproj
+RUN git clone https://github.com/anitha233/nopCommerce-24.git
+RUN cd nopCommerce-24 && mkdir published
+RUN dotnet publish -c Release -o published/ nopCommerce-24/src/Presentation/Nop.Web/Nop.Web.csproj
 RUN cd published && mkdir bin logs
 
 
