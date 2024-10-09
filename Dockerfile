@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 RUN git clone https://github.com/anitha233/nopCommerce.git
 RUN cd nopCommerce && mkdir published
 RUN dotnet publish -c Release -o published/ nopCommerce/src/Presentation/Nop.Web/Nop.Web.csproj
